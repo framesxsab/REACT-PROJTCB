@@ -7,6 +7,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ResourcePage from "./pages/ResourcePage";
 import Explore from "./pages/Explore";
+import '../index.css';
 
 function App(){
     return (
