@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -12,14 +12,14 @@ export default function About() {
           <h1 className="text-4xl font-bold font-[Cinzel] text-center mb-6 text-blue-200">ABOUT US</h1>
           <nav className="flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto">
             <ul className="flex space-x-8 mb-4 md:mb-0">
-              <li><a href="/" className="nav-link hover:text-blue-300">Home</a></li>
-              <li><a href="/resources" className="nav-link hover:text-blue-300">Resources</a></li>
-              <li><a href="/about" className="nav-link hover:text-blue-300">About</a></li>
+              <li><Link to="/" className="nav-link hover:text-blue-300">Home</Link></li>
+              <li><Link to="/explore" className="nav-link hover:text-blue-300">Resources</Link></li>
+              <li><Link to="/about" className="nav-link hover:text-blue-300">About</Link></li>
             </ul>
-            <a href="/contribute"
+            <Link to="/contribute"
               className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
               Contribute a Resource
-            </a>
+            </Link>
           </nav>
         </div>
       </header>

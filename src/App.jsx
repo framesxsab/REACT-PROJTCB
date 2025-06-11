@@ -7,7 +7,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ResourcePage from "./pages/ResourcePage";
 import Explore from "./pages/Explore";
-import "../index.css";
+import "./index.css"; // This is correct if App.jsx is in src
 
 function App() {
   return (
