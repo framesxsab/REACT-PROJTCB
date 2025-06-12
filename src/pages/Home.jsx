@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="font-serif min-h-screen bg-cover bg-fixed bg-no-repeat relative"
+    <div className="font-serif text-gray-100 min-h-screen bg-cover bg-fixed bg-no-repeat relative"
          style={{ backgroundImage: "url('/background1-optimized.jpg')" }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-purple-900/80 z-0 backdrop-blur-md" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-purple-900/80 z-0" />
 
       {/* Header Navigation */}
       <header className="relative z-10 bg-gradient-to-r from-indigo-900 via-blue-900 to-purple-900 text-white py-8 px-4 shadow-lg">
@@ -14,12 +14,12 @@ export default function Home() {
             STUDENT RESOURCES
           </h1>
           <nav className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 bg-white/10 p-4 lg:p-6 rounded-2xl backdrop-blur-md border border-white/20 shadow-xl">
-            <ul className="flex space-x-8 mb-4 lg:mb-0 lg:mr-8">
+            <ul className="flex flex-row space-x-8 mb-4 lg:mb-0 lg:mr-8">
               <li><Link to="/" className="text-lg font-semibold hover:text-blue-300">Home</Link></li>
               <li><Link to="/explore" className="text-lg font-semibold hover:text-blue-300">Resources</Link></li>
               <li><Link to="/about" className="text-lg font-semibold hover:text-blue-300">About</Link></li>
             </ul>
-            <div className="flex space-x-4">
+            <div className="flex flex-row space-x-4">
               <Link to="/contribute" className="px-6 py-2 border-2 border-blue-400 rounded-lg text-white hover:bg-blue-500 transition-all">Contribute</Link>
               <Link to="/admin-login" className="px-6 py-2 border-2 border-purple-400 rounded-lg text-white hover:bg-purple-500 transition-all">Admin</Link>
             </div>
@@ -64,11 +64,7 @@ export default function Home() {
             </div>
             <div className="bg-white/10 p-8 rounded-2xl shadow-xl backdrop-blur-md border border-white/20 transform hover:scale-105 transition-all">
               <div className="overflow-hidden mb-6 rounded-xl ring-1 ring-white/30">
-                <img
-                  src="/images/cafe.png"
-                  alt="Cafe"
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-                />
+                <img src="/images/cafe.png" alt="Cafe" className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" />
               </div>
               <h3 className="text-2xl font-bold mb-4 font-[Cinzel] text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
                 Cafes
