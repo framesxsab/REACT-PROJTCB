@@ -12,14 +12,13 @@ export default function ResourcePage() {
     // Simulate loading time like in the original HTML version
     setTimeout(() => {
       const data = JSON.parse(localStorage.getItem("approvedResources")) || [];
-      setResources(data); 
+      setResources(data);
       setLoading(false);
     }, 500);
   }, []);
 
   useEffect(() => {
     let result = [...resources];
-
     // Filter by category
     if (category !== "all") {
       result = result.filter(
@@ -56,45 +55,58 @@ export default function ResourcePage() {
   return (
     <div className="min-h-screen font-sans relative overflow-hidden">
       {/* Animated Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] animate-pulse" 
-           style={{
-             background: 'linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 0, 255), rgb(0, 0, 255))',
-             backgroundSize: '400% 400%',
-             animation: 'backgroundFade 15s ease-in-out infinite'
-           }} />
-      
+      <div
+        className="fixed inset-0 bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] animate-pulse"
+        style={{
+          background:
+            'linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 0, 255), rgb(0, 0, 255))',
+          backgroundSize: '400% 400%',
+          animation: 'backgroundFade 15s ease-in-out infinite',
+        }}
+      />
       {/* Dark Overlay */}
       <div className="fixed inset-0 bg-purple-900/70 backdrop-blur-sm z-0" />
-      
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
         <header className="py-8 bg-white/10 backdrop-blur-md border-b border-white/10">
-          <h1 className="text-5xl font-bold text-center text-blue-500 mb-6 uppercase tracking-widest font-serif" 
-              style={{ 
-                fontFamily: 'Cinzel, serif', 
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
-                letterSpacing: '0.15em'
-              }}>
+          <h1
+            className="text-5xl font-bold text-center text-blue-500 mb-6 uppercase tracking-widest font-serif"
+            style={{
+              fontFamily: 'Cinzel, serif',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+              letterSpacing: '0.15em',
+            }}
+          >
             Available Resources
           </h1>
-          
           <nav className="text-center">
-            <a href="/" className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md">
+            <a
+              href="/"
+              className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md"
+            >
               Home
             </a>
-            <a href="/resources" className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md">
+            <a
+              href="/resources"
+              className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md"
+            >
               Resources
             </a>
-            <a href="/contribute" className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md">
+            <a
+              href="/contribute"
+              className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md"
+            >
               Contribute
             </a>
-            <a href="/about" className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md">
+            <a
+              href="/about"
+              className="mx-4 text-white hover:text-blue-300 transition-all duration-300 font-semibold text-lg hover:scale-105 hover:shadow-md"
+            >
               About
             </a>
           </nav>
         </header>
-
         <main className="container mx-auto px-4">
           {/* Filter Container */}
           <div className="max-w-4xl mx-auto my-8 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-8">
@@ -129,14 +141,12 @@ export default function ResourcePage() {
               </select>
             </div>
           </div>
-
           {/* Loading Indicator */}
           {loading && (
             <div className="text-center py-8">
               <div className="animate-spin inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full" />
             </div>
           )}
-
           {/* Resource List */}
           {!loading && (
             <div className="flex flex-wrap justify-center gap-6 p-8">
@@ -153,21 +163,17 @@ export default function ResourcePage() {
                     <h3 className="text-white text-xl font-bold mb-4 border-b-2 border-white/20 pb-2 font-[Poppins]">
                       {resource.title}
                     </h3>
-                    
                     <span className="inline-block bg-blue-500/20 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
                       {resource.category}
                     </span>
-                    
                     <p className="text-white/90 leading-relaxed text-base mb-4">
                       {resource.description}
                     </p>
-                    
                     {resource.rating && (
                       <div className="text-yellow-400 text-lg my-3">
                         {"⭐".repeat(resource.rating)}
                       </div>
                     )}
-                    
                     <span className="block text-white/70 italic text-sm mt-4">
                       {resource.location || "No location provided"}
                     </span>
@@ -178,7 +184,6 @@ export default function ResourcePage() {
           )}
         </main>
       </div>
-
       <style jsx>{`
         @keyframes backgroundFade {
           0% { background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 0, 255), rgb(0, 0, 255)); }

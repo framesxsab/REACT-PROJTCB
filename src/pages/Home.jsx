@@ -7,11 +7,11 @@ export default function Home() {
       <div className="fixed inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900" />
       <div className="fixed inset-0 bg-gradient-to-tr from-cyan-600/20 via-transparent to-rose-600/20" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent)]" />
-      
+
       {/* Floating Orbs - Improved animation */}
       <div className="fixed top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/30 to-purple-600/30 rounded-full blur-3xl opacity-70 animate-pulse" />
-      <div className="fixed bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-pink-400/20 to-indigo-600/20 rounded-full blur-3xl opacity-70 animate-pulse" style={{animationDelay: '1s'}} />
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-violet-600/20 rounded-full blur-3xl opacity-70 animate-pulse" style={{animationDelay: '0.5s'}} />
+      <div className="fixed bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-pink-400/20 to-indigo-600/20 rounded-full blur-3xl opacity-70 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-violet-600/20 rounded-full blur-3xl opacity-70 animate-pulse" style={{ animationDelay: '0.5s' }} />
 
       {/* Header Navigation */}
       <header className="relative z-10 bg-gradient-to-r from-slate-900/80 via-indigo-900/80 to-purple-900/80 backdrop-blur-xl text-white py-6 px-4 shadow-2xl border-b border-white/10">
@@ -60,10 +60,12 @@ export default function Home() {
               Find the Best Resources for Your Requirements
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed max-w-4xl mx-auto">
-              From study materials to everyday essentials, explore curated recommendations 
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-semibold"> crafted by students, for students</span>.
+              From study materials to everyday essentials, explore curated recommendations
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-semibold">
+                crafted by students, for students
+              </span>.
             </p>
-            <a 
+            <a
               href="/explore"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-10 py-3.5 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 hover:scale-105 border border-emerald-400/30 backdrop-blur-sm"
             >
@@ -80,7 +82,7 @@ export default function Home() {
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto px-4">
             {/* Bookstore Card with Image */}
             <div className="group bg-gradient-to-br from-white/10 via-white/5 to-white/10 p-6 lg:p-8 rounded-3xl shadow-2xl backdrop-blur-xl border border-white/20 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-500/30">
@@ -166,8 +168,8 @@ export default function Home() {
           <p className="mb-4 text-gray-300 text-sm lg:text-base">&copy; 2025 Student Resources. All rights reserved.</p>
           <p className="text-gray-300 text-sm lg:text-base">
             Contact us at{" "}
-            <a 
-              href="mailto:info@studentresources.com" 
+            <a
+              href="mailto:info@studentresources.com"
               className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold"
             >
               info@studentresources.com

@@ -43,13 +43,13 @@ export default function Contribute() {
       </nav>
       <main className="flex-grow flex items-center justify-center py-12 px-4 relative z-10">
         <div className="w-full max-w-2xl bg-white/20 backdrop-blur-2xl border border-white/30 rounded-3xl shadow-2xl p-10 flex flex-col items-center">
-          <h1 className="text-4xl font-bold text-center text-white mb-8 font-[Cinzel] drop-shadow-lg bg-gradient-to-r from-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent mb-8 font-[Cinzel] drop-shadow-lg">
             Contribute a Resource
           </h1>
           {submitted ? (
             <div className="flex flex-col items-center gap-4 py-12">
               <span className="text-5xl text-cyan-400">✅</span>
-              <p className="text-xl text-white font-semibold text-center">Thank you for your contribution!<br/>Redirecting...</p>
+              <p className="text-xl font-semibold text-center text-white">Thank you for your contribution!<br />Redirecting...</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-7 w-full">
@@ -112,8 +112,10 @@ export default function Contribute() {
                   className="w-full px-4 py-3 bg-white/80 border border-cyan-200 rounded-xl text-gray-900 focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none shadow-sm placeholder-gray-400"
                 />
               </div>
-              <button type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 hover:shadow-lg font-semibold text-lg flex items-center justify-center gap-2">
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 hover:shadow-lg font-semibold text-lg flex items-center justify-center gap-2"
+              >
                 <span>Submit Resource</span> <span>🚀</span>
               </button>
             </form>
