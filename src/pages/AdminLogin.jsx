@@ -20,39 +20,56 @@ export default function AdminLogin() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-800 via-cyan-600 to-teal-500 flex items-center justify-center p-6">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl p-8 w-full max-w-lg">
-                <h1 className="text-3xl font-bold text-white text-center mb-8">Admin Login</h1>
-                <form onSubmit={handleLogin} className="space-y-6">
+        <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-400 flex items-center justify-center p-6 relative overflow-hidden">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-300 opacity-80" style={{backgroundSize: '200% 200%'}} />
+            <div className="relative z-10 bg-white/20 backdrop-blur-2xl border border-cyan-400/20 rounded-2xl shadow-2xl p-10 w-full max-w-lg">
+                <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent font-[Cinzel] drop-shadow-lg">Admin Login</h1>
+                <form onSubmit={handleLogin} className="space-y-7">
                     <div>
-                        <label className="block text-white mb-2">Username</label>
+                        <label className="flex text-cyan-100 mb-2 font-semibold items-center gap-2"><span className="text-xl">👤</span> Username</label>
                         <input
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            className="w-full px-4 py-3 bg-white/10 text-white border border-white/20 rounded-lg"
+                            className="w-full px-4 py-3 bg-white/80 text-gray-900 border border-cyan-200 rounded-xl focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none shadow-sm placeholder-gray-400"
                             required
+                            placeholder="Enter admin username"
                         />
                     </div>
                     <div>
-                        <label className="block text-white mb-2">Password</label>
+                        <label className="flex text-cyan-100 mb-2 font-semibold items-center gap-2"><span className="text-xl">🔒</span> Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full px-4 py-3 bg-white/10 text-white border border-white/20 rounded-lg"
+                            className="w-full px-4 py-3 bg-white/80 text-gray-900 border border-cyan-200 rounded-xl focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none shadow-sm placeholder-gray-400"
                             required
+                            placeholder="Enter password"
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-white/20 text-white py-3 px-6 rounded-xl hover:bg-white/30 transition"
+                        className="w-full bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 text-white py-3 px-6 rounded-xl hover:from-cyan-400 hover:to-blue-800 transition-all duration-200 transform hover:scale-105 hover:shadow-lg font-semibold text-lg flex items-center justify-center gap-2 shadow-md"
                     >
-                        Login
+                        <span>Login</span> <span>🔑</span>
                     </button>
-                    {error && <p className="text-red-500 mt-4">{error}</p>}
+                    {error && <p className="text-red-400 mt-4 text-center font-semibold animate-fadein">{error}</p>}
                 </form>
             </div>
+            <style>{`
+                @keyframes gradient {
+                  0% {background-position: 0% 50%;}
+                  50% {background-position: 100% 50%;}
+                  100% {background-position: 0% 50%;}
+                }
+                .animate-gradient { animation: gradient 12s ease-in-out infinite; }
+                @keyframes fadein {
+                  from { opacity: 0; transform: translateY(30px); }
+                  to { opacity: 1; transform: none; }
+                }
+                .animate-fadein { animation: fadein 0.7s cubic-bezier(.4,0,.2,1) both; }
+            `}</style>
         </div>
     );
 }
