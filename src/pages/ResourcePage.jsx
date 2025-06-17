@@ -9,7 +9,7 @@ export default function ResourcePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time like in the original HTML version
+  
     setTimeout(() => {
       const data = JSON.parse(localStorage.getItem("approvedResources")) || [];
       setResources(data);
@@ -54,7 +54,7 @@ export default function ResourcePage() {
 
   return (
     <div className="min-h-screen font-sans relative overflow-hidden">
-      {/* Animated Background */}
+      {/*  Background */}
       <div
         className="fixed inset-0 bg-gradient-to-br from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] animate-pulse"
         style={{
@@ -64,7 +64,7 @@ export default function ResourcePage() {
           animation: 'backgroundFade 15s ease-in-out infinite',
         }}
       />
-      {/* Dark Overlay */}
+      {/* Dark Overlay (accha laga ) */}
       <div className="fixed inset-0 bg-purple-900/70 backdrop-blur-sm z-0" />
       {/* Content */}
       <div className="relative z-10">

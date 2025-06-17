@@ -21,7 +21,7 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-400 flex items-center justify-center p-6 relative overflow-hidden">
-      {/* Animated background gradient */}
+      {/* background gradient */}
       <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-300 opacity-80" style={{ backgroundSize: '200% 200%' }} />
       <div className="relative z-10 bg-white/20 backdrop-blur-2xl border border-cyan-400/20 rounded-2xl shadow-2xl p-10 w-full max-w-lg">
         <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent font-[Cinzel] drop-shadow-lg">Admin Login</h1>

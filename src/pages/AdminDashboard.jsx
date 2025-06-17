@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AdminDashboard() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const [resources, setResources] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-400 text-white relative overflow-hidden">
-      {/* Animated background gradient */}
+      {/*  background gradient */}
       <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-cyan-900 via-blue-800 to-blue-300 opacity-80" style={{ backgroundSize: '200% 200%' }} />
       <header className="relative z-10 bg-white/10 backdrop-blur-2xl border-b border-cyan-400/20 p-7 flex justify-between items-center shadow-2xl">
         <h1 className="text-3xl font-bold font-[Cinzel] bg-gradient-to-r from-cyan-300 via-blue-200 to-purple-300 bg-clip-text text-transparent drop-shadow-lg">Admin Dashboard</h1>

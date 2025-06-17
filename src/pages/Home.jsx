@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="font-serif text-gray-100 min-h-screen relative overflow-hidden">
-      {/* Animated Background */}
+      {/* change in  Background  colours */}
       <div className="fixed inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900" />
       <div className="fixed inset-0 bg-gradient-to-tr from-cyan-600/20 via-transparent to-rose-600/20" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent)]" />
@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section */}
+        {/* Stats Section( kitna app ne logon ko help kiya ) */}
         <section className="py-20">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">

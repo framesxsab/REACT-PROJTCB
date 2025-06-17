@@ -32,7 +32,7 @@ export default function Contribute() {
 
   return (
     <div className="font-serif min-h-screen flex flex-col justify-between bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-300 relative overflow-hidden">
-      {/* Soft overlay for glass effect */}
+      {/*  glass effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(255,255,255,0.12),transparent_70%)] pointer-events-none z-0" />
       <nav className="relative z-10 p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
